@@ -1,6 +1,10 @@
 {
-    "existingUser": "admin",
-    "nonExistingUser": "pindol",
+  "validUser": {
+    "username": "admin",
     "password": "admin"
-
+  },
+  "invalidUser": {
+    "username": "dziubasek",
+    "password": "admin"
+  }
 }
