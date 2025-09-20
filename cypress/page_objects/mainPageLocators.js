@@ -7,15 +7,15 @@ class MainpageLocators {
         return '#loginpassword'
     }
 
-    get logInBttn () {
+    get logInBtn () {
         return '.btn.btn-primary'
     }
 
-    get openLogInBttn () {
+    get openLogInBtn () {
         return '#login2'
     }
 
-    get welcomeBttn () {
+    get welcomeBtn () {
         return '#nameofuser'
     }
 }
