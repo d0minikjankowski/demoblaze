@@ -18,6 +18,14 @@ class MainpageLocators {
     get welcomeBtn () {
         return '#nameofuser'
     }
+
+    get cartBtn () {
+        return '#cartur'
+    }
+
+    get logo () {
+        return '[src="bm.png"]'
+    }
 }
 
 export default new MainpageLocators;
