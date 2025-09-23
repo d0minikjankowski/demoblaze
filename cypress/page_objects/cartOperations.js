@@ -1,3 +1,4 @@
+import mainPageLocators from "./mainPageLocators";
 import productsLocators from "./productsLocators";
 
 class CartOperations {
@@ -54,6 +55,10 @@ class CartOperations {
             cy.stub(win, 'alert').as('alertStub')
         })
         cy.get('@alertStub').should('have.been.calledWith', 'Product added')
+    }
+
+    clickLogoBtn() {
+        cy.get(mainPageLocators.logo).eq(0).click()
     }
 
 }
