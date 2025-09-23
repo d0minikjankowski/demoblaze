@@ -15,4 +15,20 @@ describe('adding products', () => {
         cartOperations.addSamsungGalaxyS7()
     })
 
+    it('add Nokia Lumia 1520', () => {
+        cartOperations.addNokiaLumia1520()
+    })
+
+    it('add Nexus 6', () => {
+        cartOperations.addNexus6()
+    })
+
+    it('add iphone 6 32GB', () => {
+        cartOperations.addIphone632gb()
+    })
+
+    it('add Sony Xperia Z5', () => {
+        cartOperations.addSonyXperiaZ5()
+    })
+
 })
