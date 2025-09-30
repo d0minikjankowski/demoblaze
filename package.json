@@ -1,10 +1,10 @@
 {
   "type": "module",
-  "dependencies": {
-    "cypress": "^15.2.0"
-  },
   "devDependencies": {
-    "@types/cypress": "^0.1.6"
+    "@types/cypress": "^0.1.6",
+    "cypress": "^15.3.0",
+    "cypress-multi-reporters": "^2.0.5",
+    "mocha-junit-reporter": "^2.2.1"
   },
   "name": "demoblaze",
   "version": "1.0.0",
