@@ -4,14 +4,21 @@
     "@types/cypress": "^0.1.6",
     "cypress": "^15.3.0",
     "cypress-multi-reporters": "^2.0.5",
-    "mocha-junit-reporter": "^2.2.1"
+    "mocha-junit-reporter": "^2.2.1",
+    "rimraf": "^6.0.1"
   },
   "name": "demoblaze",
   "version": "1.0.0",
   "description": "portfolio based on demoblaze test site",
   "main": "cypress.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "all": "npx cypress run",
+    "delete:reports": "rimraf cypress/results/",
+    "prereport": "npm run delete:reports",
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json",
+    "mochawesome:html": "npx marge mochawesome.json",
+    "full:test": "npm run delete:reports && npm run all && npm run mochawesome:merge && npm run mochawesome:html"
   },
   "repository": {
     "type": "git",
@@ -22,5 +29,10 @@
   "bugs": {
     "url": "https://github.com/d0minikjankowski/demoblaze/issues"
   },
-  "homepage": "https://github.com/d0minikjankowski/demoblaze#readme"
+  "homepage": "https://github.com/d0minikjankowski/demoblaze#readme",
+  "dependencies": {
+    "mochawesome": "^7.1.4",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.3.0"
+  }
 }
