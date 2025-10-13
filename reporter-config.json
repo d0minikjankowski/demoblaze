@@ -7,6 +7,6 @@
         "reportDir": "cypress/results/mochawesome",
         "overwrite": false,
         "html": false,
-        "josn": true
+        "json": true
     }
 }

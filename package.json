@@ -7,7 +7,8 @@
     "cypress-axe": "^1.7.0",
     "cypress-multi-reporters": "^2.0.5",
     "mocha-junit-reporter": "^2.2.1",
-    "rimraf": "^6.0.1"
+    "rimraf": "^6.0.1",
+    "wait-on": "^9.0.1"
   },
   "name": "demoblaze",
   "version": "1.0.0",
@@ -16,11 +17,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "all": "npx cypress run",
-    "delete:reports": "rimraf cypress/results/",
+    "delete:reports": "rimraf cypress/results/ && rimraf mochawesomeFULL.json",
     "prereport": "npm run delete:reports",
-    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json",
-    "mochawesome:html": "npx marge mochawesome.json",
-    "full:test": "npm run delete:reports && npm run all && npm run mochawesome:merge && npm run mochawesome:html"
+    "mochawesome:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesomeFULL.json",
+    "mochawesome:html": "npx marge mochawesomeFULL.json",
+    "report:report": "npm run mochawesome:merge && npm run mochawesome:html",
+    "full:test": "npm run prereport && npx cypress run || npm run report:report"
+
   },
   "repository": {
     "type": "git",
